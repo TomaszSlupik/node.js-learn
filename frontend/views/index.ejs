@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="../assets/css/index.css" />
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>ALK</h1>
+    <h2> <%= title %> </h2>
+    <% for(var i=0; i <find.length; i++) {%>
+    <li> <%= find[i].name %> </li>
+    <%} %>
+
+
+    <button id="btn">Wypisz dane z bazy</button>
+    <ul>
+        <li id="dataOne"></li>
+        <li id="dataTwo"></li>
+        <li id="dataThree"></li>
+    </ul>
+
+    <form action="/" method="POST">
+        <input type="text" placeholder="name" id="name" name="name">
+        <input type="text" placeholder="rank" id="rank" name="rank">
+        <input type="number" placeholder="age" id="age" name="age">
+        <button type="submit">Dodaj użytkownika do Bazy</button>
+    </form>
+
+    <form action="/update" method="POST">
+        <input type="text" placeholder="name" id="name" name="name">
+        <button type="submit">Uaktualnij</button>
+    </form>
+
+    <form action="/delete" method="POST">
+        <input type="text" placeholder="name" id="name" name="name">
+        <button type="submit">Usuń</button>
+    </form>
+
+    <form action="/deleteOnetoThree" method="POST">
+        <select name="ktoryusunac" id="">
+            <option value="0">1</option>
+            <option value="1">2</option>
+            <option value="2">3</option>
+          </select>
+          <button type="submit">Usuń wybranego</button>
+    </form>
+
+
+
+
+    <script src="./../js/index.js"></script>
+</body>
+
+</html>
